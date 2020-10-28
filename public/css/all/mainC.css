@@ -1,23 +1,40 @@
-
 #all {
     color: red;
 }
 #box {
+    border-top: 3px solid #00d1ff;
+    border-bottom: 3px solid red;
+    border-left: 3px solid red;
+    border-right: 3px solid #00d1ff;
     display:flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color: #434242;;
     margin: 2vw;
-    height: 45vh;
-    width: 20vw;
+    height: 50vh;
+    width: 40vw;
+    transition: 0.5s;
 
 }
-#image{
-    width:20vw;
-    height: 20vh;
+#box:hover{
+    border: 2px solid white;
+    border-radius: 2vh 2vh 2vh 2vh;
+    background-color: #00d1ff;
+    height: 50.5vh;
+    width: 40.5vw;
+
+}
+
+/*#image{
+    width:30vw;
+    height: 30vh;
     border: 2px solid white;
     
+}
+<div id="image">{{ $shop->logo }}</div>*/
+h1{
+    font-size: 10vh;
 }
 #space{
     margin-top: 5vh;
@@ -26,4 +43,3 @@
     justify-content: space-around;
     margin-bottom: 20vh;
 }
-

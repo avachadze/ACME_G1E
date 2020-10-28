@@ -9,12 +9,12 @@
         <div id="space">
             <a href="/all">
                 <div id="mall1">
-                    <img id="alcampo" src="images/alcampo2.png">
+                    <img id="alcampo" src="images/mall/alcampo2.png">
                 </div>
             </a>
             <a href="/all">
                 <div id="mall2">
-                    <img id="urbil" src="images/urbil2.png">
+                    <img id="urbil" src="images/mall/urbil2.png">
                 </div>
             </a>
         </div>

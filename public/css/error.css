@@ -31,6 +31,7 @@ section{
     align-items: center;
     flex-direction: column-reverse;
 
+    
 }
 #errorImage{
     width: 15vw;

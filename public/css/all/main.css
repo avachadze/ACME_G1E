@@ -10,8 +10,18 @@
     margin: 2vw;
     height: 45vh;
     width: 70vw;
+    transition: 0.5s;
 
 }
+#box:hover{
+    border: 2px solid white;
+    border-radius: 2vh 2vh 2vh 2vh;
+    background-color: #00d1ff;
+    height: 45.5vh;
+    width: 70.5vw;
+
+}
+
 #image{
     
     width:45vw;

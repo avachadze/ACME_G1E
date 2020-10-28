@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 
 Route::resource('/all', 'AllController');
+Route::resource('/add', 'AllController');
+Route::resource('/modify', 'AllController');
+Route::resource('/delete', 'AllController');

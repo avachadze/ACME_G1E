@@ -46,6 +46,22 @@ h5:hover{
     display: flex;
 
 }
+#arrow{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#arrowImg {
+    max-width: 6vw;
+    transition: 0.5s;
+    
+}
+#arrowImg:hover {
+    background-color:  #00d1ff;;
+    border-radius: 10vh 10vh 10vh 10vh ;
+}
 #space{
     margin-top: 5vh;
     display: flex;
@@ -54,7 +70,7 @@ h5:hover{
 
 }
 #mall1{
-    
+    border: 3px solid red; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,6 +94,7 @@ h5:hover{
     background-color: #00d1ff;
 }
 #mall2{
+    border: 3px solid #00d1ff; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,7 +114,7 @@ h5:hover{
     height: 20vh;
 }
 footer{
-    border-top: 2px solid white;
+    border-top: 3px solid #00d1ff;
     position: fixed;
     Width: 100%;
     bottom: 0;
