@@ -7,7 +7,7 @@
 <link rel="stylesheet" media="screen and (min-width:600px) and (max-width:999px)" href="css/mainTablet.css">
 <link rel="stylesheet" media="screen and (min-width:1000px)" href="css/mainComputer.css">
 
- @yield('style');
+ @yield('style')
 
 </head>
 
@@ -33,7 +33,6 @@
     <footer id="footer">
         <h5>Email:mallInfo@acme.com</h5>
         <h5>Number:635 87 68 25</h5>
-    </footer>  
+    </footer>
 </body>
 </html>
- 

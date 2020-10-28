@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Storage;
 
 class ProductController extends Controller
 {
@@ -24,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view(product.create);
+        return view('Product.create');
     }
 
     /**
@@ -35,22 +36,25 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate($request, [
-            'id'=>'',
+        $this->validate($request, [
             'shopID'=>'required',
             'name' => 'required',
-            'quantity'=>'required',
-            'price'=>'required',
-            'picture'=>'required'
+            'quantity' => 'required',
+            'price' => 'required',
+            'picture' => 'required'
         ]);
 
+        $productName= $request->input('name');
+        $img= $request->file('picture');
+        $fileName= $productName . time();
+        $path= $img->storeAs('public/images', $fileName);
 
         $product= new Product();
-        $product->shopCode= $request->input('shopID');
-        $product->name= $request->input('name');
+        $product->shopID= $request->input('shopID');
+        $product->name= $productName;
         $product->quantity= $request->input('quantity');
         $product->price= $request ->input('price');
-        $produtc->picture= $request ->file('picture');
+        $product->picture= $path;
         $product->save();
     }
 

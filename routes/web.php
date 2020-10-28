@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/all', 'AllController');
+Route::resource('/product', 'ProductController');
