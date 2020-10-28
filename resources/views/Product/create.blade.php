@@ -10,15 +10,19 @@
 
 @section('content')
     <h1>Insert the data to create a new entry</h1>
-    <form enctype="multipart/form-data" action="{{ route('ProductController.store') }}" method="post">
+    <form enctype="multipart/form-data" action="{{ route('product.store') }}" method="post">
         <label for="name">Name:</label>
         <input type="text" name="name"><br>
         <label for="shopID">Shop ID:</label>
         <input type="text" name="shopID"><br>
         <label for="quantity">Stock:</label>
         <input type="text" name="quantity"><br>
+        <label for="price">Price:</label>
+        <input type="text" name="price"><br>
         <label for="picture">Product image:</label>
         <input type="file" name="picture"><br>
+        <input type="submit">
+        @csrf
     </form>
 
 @endsection
