@@ -1,0 +1,123 @@
+/*Computer style*/
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #393737;
+    color: white;
+    font-family: Times New Roman;
+}
+h1{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -3vh;
+    margin-bottom: -3vh;
+}
+h2{
+    font-size: 3rem;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    margin:1rem;
+    flex-direction: column;
+}
+
+ul{
+    margin-top: -2vh;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 10vh;
+}
+li{
+    font-size: 1.2rem;;
+    margin-left: 1rem;
+}
+li:hover{
+    color: red;
+}
+h5{
+    color: lightgray;
+}
+h5:hover{
+    color: white;
+}
+#selected {
+    color: red;
+
+}
+#space{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20vh;
+
+}
+#mall1{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #434242;
+    width: 22rem;
+    height: 22rem;
+    transition: 0.3s;
+}
+#mall1:hover{
+    border: 2px solid white;
+    border-radius: 2vh 2vh 2vh 2vh;
+    width: 22.5rem;
+    height: 22.5rem;
+    background-color: #00d1ff;
+}
+#mall2:hover{
+    border: 2px solid white;
+    border-radius: 2vh 2vh 2vh 2vh;
+    width: 22.5rem;
+    height: 22.5rem;
+    background-color: #00d1ff;
+}
+#mall2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #434242;
+    width: 22rem;
+    height: 22rem;
+    transition: 0.3s;
+}
+#urbil{
+    min-width: 10vw;
+    width: 35vw;
+    height: 35vh;
+}
+#alcampo{
+    
+    width: 40vw;
+    height: 50vh;
+}
+footer{
+    border-top: 2px solid white;
+    position: fixed;
+    Width: 100%;
+    bottom: 0;
+    background-color:#434242 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 12vh;
+}
+h5{
+    margin-top: -3vh;
+    padding-right: 2vh;
+}
+
+#error{
+    display: none;
+}

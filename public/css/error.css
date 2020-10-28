@@ -1,0 +1,41 @@
+/*phone style*/
+body,html{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #393737;
+    color: white;
+    font-family: Times New Roman;
+}
+header{
+    display: none;
+
+}
+footer{
+    display: none;
+}
+#mall1,#mall2{
+    display: none;
+}
+section{
+    height: 100%;
+    height: window.height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+#error{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+
+}
+#errorImage{
+    width: 15vw;
+    height: 15vh;
+}
+#space{
+    display: none;
+}
