@@ -28,7 +28,7 @@
         </nav>
     </header>
     <div class="d-flex">
-    @yield('content');
+    @yield('content')
     </div>
     <footer id="footer">
         <h5>Email:mallInfo@acme.com</h5>
