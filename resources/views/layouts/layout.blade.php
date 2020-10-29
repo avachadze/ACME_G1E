@@ -18,12 +18,11 @@
         <h2>Welcome to center</h2>
         <nav>
             <ul>
-                <li> <a href="/" id="mall">mall</a></li>
-                <li><a href="/all" id="all">all</a></li>
-                <li><a href="#footer">info</a></li>
-                <li><a href="/add" id="add">add</a></li>
-                <li><a href="/delete" id="delete">delete</a></li>
-                <li><a href="/change" id="modify">modify</a></li>
+                <li> <a href="/" id="mall">Malls</a></li>
+                <li><a href="/shop" id="all">Shops</a></li>
+                <li><a href="/add" id="add">Create</a></li>
+                <li><a href="/delete" id="delete">Delete</a></li>
+                <li><a href="/change" id="modify">Modify</a></li>
             </ul>
         </nav>
     </header>

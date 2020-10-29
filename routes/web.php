@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/all', 'AllController');
 Route::resource('/product', 'ProductController');
+Route::resource('/shop', 'ShopController');
 
 Auth::routes();
 

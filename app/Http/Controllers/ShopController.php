@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Shop;
 
 class ShopController extends Controller
 {
@@ -13,7 +14,8 @@ class ShopController extends Controller
      */
     public function index()
     {
-        //
+        $shops= Shop::All();
+        return view('shops')->with('shops', $shops);
     }
 
     /**
@@ -23,7 +25,7 @@ class ShopController extends Controller
      */
     public function create()
     {
-        //
+        return view('Shop.create');
     }
 
     /**
@@ -35,16 +37,20 @@ class ShopController extends Controller
     public function store(Request $request)
     {
         $request->validate($request, [
-            'id'=>'',
-            'mallCode'=>'required',
-            'name'=>'reqired',
-            'logo'=>''
+            'name' => 'required',
+            'logo' => ''
         ]);
+
+        $shopName= $request->input('name');
+        $img= $request->file('logo');
+        $fileName= $shopName . time();
+        $path= $img->storeAs('public/images/logos', $fileName);
+
         $shop = new Shop();
-        $shop->mallCode = $request->input('mallCode');
-        $shop->name = $request->input('name');
-        $shop->logo = $request->file('logo');
-        $shop-save()
+        $shop->name = $shopName;
+        $shop->logo = $path;
+        $shop-save();
+        redirect('/shop');
     }
 
     /**
@@ -66,7 +72,8 @@ class ShopController extends Controller
      */
     public function edit($id)
     {
-        //
+        $shop= Shop::find($id);
+        return view('Shop.edit')->with('shop', $shop);
     }
 
     /**
@@ -78,7 +85,12 @@ class ShopController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate($request, [
+            'name'=>'reqired'
+        ]);
+        $shop = new Shop();
+        $shop->name = $request->input('name');
+        $shop-save();  
     }
 
     /**

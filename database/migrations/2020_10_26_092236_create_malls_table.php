@@ -17,7 +17,6 @@ class CreateMallsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('logo');
-            $table->string('headerImage');
             $table->timestamps();
         });
     }

@@ -32,7 +32,6 @@ class MallController extends Controller
         $mall = new Mall();
         $mall->name=$request->input('name');
         $mall->logo=$request->file('logo');
-        $mall->headerImage=$request->file('headerImage');
         $mall-save();
     }
 

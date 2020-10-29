@@ -16,8 +16,8 @@
 
     <div id="box">
 
-        <div id="image">{{ $shop->logo }}</div>
-        <h3>{{ $shop->name }}</h3>
+        <div id="image"><img href="{{ $shop->logo }}"></div>
+        <h3>{{ __($shop->name) }}</h3>
     </div>
 
     @endforeach
