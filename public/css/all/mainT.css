@@ -1,30 +1,34 @@
-
 #all {
     color: red;
 }
+
 #box {
-    display:flex;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #434242;;
+    background-color: #434242;
     margin: 2vw;
     height: 35vh;
-    width: 45vw;
-
-    transition: 0.5s;
-
+    width: 42vw;
+    transition: 0.3s;
 }
-#box:hover{
+
+#box:hover {
+    border: 3px solid white;
+    border-radius: 1vh 1vh 1vh 1vh;
+    height: 35.5vh;
+    width: 42.5vw;
     background-color: #00d1ff;
 }
-#image{
-    width:20vw;
+
+#image {
+    width: 20vw;
     height: 20vh;
     border: 2px solid white;
-    
 }
-#space{
+
+#space {
     margin-top: 5vh;
     display: flex;
     flex-wrap: wrap;

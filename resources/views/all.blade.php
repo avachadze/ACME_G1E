@@ -12,22 +12,22 @@
 @if (count($shops) > 0)
 <div id="space">
     @foreach ($shops as $shop)
-    
 
-        <div id="box">
-            
-            <div id="image">{{ $shop->logo }}</div>
-            <h3>{{ $shop->name }}</h3>
-        </div>
-    
+
+    <div id="box">
+
+        <div id="image">{{ $shop->logo }}</div>
+        <h3>{{ $shop->name }}</h3>
+    </div>
+
     @endforeach
 </div>
 @else
-    <h1>There are no shops yet</h1>
+<h1>There are no shops yet</h1>
 @endif
 <div id="error">
     This device is not compatible with this page.
     <img id="errorImage" src="images/error.png">
 </div>
-        
+
 @endsection

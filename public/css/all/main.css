@@ -1,29 +1,35 @@
 #all {
     color: red;
 }
+
 #box {
-    display:flex;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #434242;;
+    background-color: #434242;
+    ;
     margin: 2vw;
     height: 45vh;
     width: 70vw;
-    transition: 0.5s;
-
+    transition: 0.3s;
 }
-#box:hover{
+
+#box:hover {
+    border: 3px solid white;
+    border-radius: 1vh 1vh 1vh 1vh;
+    height: 45.5vh;
+    width: 70.5vw;
     background-color: #00d1ff;
 }
-#image{
-    
-    width:45vw;
+
+#image {
+    width: 45vw;
     height: 40vh;
     border: 2px solid white;
-    
 }
-#space{
+
+#space {
     margin-top: 5vh;
     display: flex;
     flex-wrap: wrap;
