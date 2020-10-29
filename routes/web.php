@@ -17,7 +17,9 @@ use App\Http\Controllers;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/destroy',function(){
+    return view(Products.destroy);
+});
 Route::resource('/all', 'AllController');
 Route::resource('/product', 'ProductController');
 
