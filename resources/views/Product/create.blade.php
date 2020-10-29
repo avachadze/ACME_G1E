@@ -14,29 +14,29 @@
                 <div class="w-50">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" name="name" class="form-control">
+                        <input type="text" name="name"  id="name"  class="form-control">
                     </div>
 
                     <div class="form-group">
                         <label for="shopID">Shop ID:</label>
-                        <input type="text" class="form-control"  name="shopID">
+                        <input type="text" class="form-control"  name="shopID" id="shopID">
                     </div>
 
                     <div class="form-group">
                         <label for="quantity">Stock:</label>
-                        <input type="text" class="form-control"  name="quantity">
+                        <input type="text" class="form-control" id="quantity" name="quantity">
                     </div>
                 </div>
 
                 <div class="w-50">
                     <div class="form-group">
                         <label for="price">Price:</label>
-                        <input type="text" class="form-control"  name="price">
+                        <input type="text" class="form-control" id="price" name="price">
                     </div>
 
                     <div class="form-group">
                         <label for="picture">Product image:</label>
-                        <input type="file" class="form-control-file"  name="picture">
+                        <input type="file" class="form-control-file" id="picture" name="picture">
                     </div>
 
                     <input type="submit" value="submit">
