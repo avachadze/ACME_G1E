@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('style')
-    <link href = {{ asset("bootstrap/css/bootstrap.css") }} rel="stylesheet" />
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         .hid
         {
