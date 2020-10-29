@@ -1,25 +1,30 @@
-
+/*Computer style*/
 body{
-    margin: 0px;
-    padding: 0px;
+    margin: 1px;
+    padding: 1px;
     background-color: #393737;
     color: white;
     font-family: Times New Roman;
 }
 h1{
-    
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -3vh;
     margin-bottom: -3vh;
+}
+h2{
+    font-size: 3rem;
+    text-align: center;
 }
 a{
     text-decoration: none;
     color: inherit;
 }
 header{
-    display: flex;
-
-    align-items: center;
+    
     flex-direction: column;
 }
+
 
 ul{
     margin-top: -2vh;
@@ -30,6 +35,7 @@ ul{
     margin-right: 10vh;
 }
 li{
+    font-size: 1.2rem;;
     margin-left: 1rem;
 }
 li:hover{
@@ -43,47 +49,49 @@ h5:hover{
 }
 #selected {
     color: red;
-    display: flex;
 
 }
 #space{
     margin-top: 5vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 20vh;
 
 }
 #mall1{
-    
+    border: 3px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #434242;
-    width: 15rem;
-    height: 15rem;
+    width: 18rem;
+    height: 18rem;
     transition: 0.3s;
 }
 #mall1:hover{
     border: 2px solid white;
     border-radius: 2vh 2vh 2vh 2vh;
-    width: 15.5rem;
-    height: 15.5rem;
+    width: 18.5rem;
+    height: 18.5rem;
     background-color: #00d1ff;
 }
 #mall2:hover{
     border: 2px solid white;
     border-radius: 2vh 2vh 2vh 2vh;
-    width: 15.5rem;
-    height: 15.5rem;
+    width: 18.5rem;
+    height: 18.5rem;
     background-color: #00d1ff;
 }
 #mall2{
+    border: 3px solid #00d1ff;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #434242;
-    width: 15rem;
-    height: 15rem;
+    width: 18rem;
+    height: 18rem;
     transition: 0.3s;
 }
 #urbil{
@@ -92,16 +100,16 @@ h5:hover{
     height: 35vh;
 }
 #alcampo{
-    min-width: 10vw;
-    width: 30vw;
-    height: 20vh;
+    
+    width: 40vw;
+    height: 50vh;
 }
 footer{
-    border-top: 2px solid white;
+    border-top: 3px solid #00d1ff;
     position: fixed;
     Width: 100%;
     bottom: 0;
-    background-color:#434242 ; ;
+    background-color:#434242 ;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -112,6 +120,26 @@ h5{
     margin-top: -3vh;
     padding-right: 2vh;
 }
+
 #error{
     display: none;
+}
+#arrow{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#arrowImg{
+    width: 5vw;
+    height: 10vh;
+}
+
+#arrowImg:hover{
+    border-radius: 10vh 10vh 10vh 10vh;
+    background-color: #00d1ff;
+}
+
+section{
+    border: 3px solid #00d1ff;
 }

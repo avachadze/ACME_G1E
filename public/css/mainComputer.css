@@ -1,7 +1,7 @@
 /*Computer style*/
 body{
-    margin: 0px;
-    padding: 0px;
+    margin: 1px;
+    padding: 1px;
     background-color: #393737;
     color: white;
     font-family: Times New Roman;
@@ -21,9 +21,10 @@ a{
     color: inherit;
 }
 header{
-    margin:1rem;
+    
     flex-direction: column;
 }
+
 
 ul{
     margin-top: -2vh;
@@ -59,7 +60,7 @@ h5:hover{
 
 }
 #mall1{
-    
+    border: 3px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,6 +84,7 @@ h5:hover{
     background-color: #00d1ff;
 }
 #mall2{
+    border: 3px solid #00d1ff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,7 +104,7 @@ h5:hover{
     height: 50vh;
 }
 footer{
-    border-top: 2px solid white;
+    border-top: 3px solid #00d1ff;
     position: fixed;
     Width: 100%;
     bottom: 0;
@@ -120,4 +122,23 @@ h5{
 
 #error{
     display: none;
+}
+#arrow{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#arrowImg{
+    width: 5vw;
+    height: 10vh;
+}
+
+#arrowImg:hover{
+    border-radius: 10vh 10vh 10vh 10vh;
+    background-color: #00d1ff;
+}
+
+section{
+    border: 3px solid #00d1ff;
 }

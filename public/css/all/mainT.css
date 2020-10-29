@@ -9,9 +9,14 @@
     align-items: center;
     background-color: #434242;;
     margin: 2vw;
-    height: 30vh;
-    width: 25vw;
+    height: 35vh;
+    width: 45vw;
 
+    transition: 0.5s;
+
+}
+#box:hover{
+    background-color: #00d1ff;
 }
 #image{
     width:20vw;

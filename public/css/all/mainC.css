@@ -10,8 +10,13 @@
     background-color: #434242;;
     margin: 2vw;
     height: 45vh;
-    width: 20vw;
+    width: 35vw;
 
+    transition: 0.5s;
+
+}
+#box:hover{
+   background-color: #00d1ff; 
 }
 #image{
     width:20vw;
@@ -26,4 +31,6 @@
     justify-content: space-around;
     margin-bottom: 20vh;
 }
-
+section{
+    border: 3px solid #00d1ff;
+}

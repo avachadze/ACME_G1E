@@ -10,7 +10,11 @@
     margin: 2vw;
     height: 45vh;
     width: 70vw;
+    transition: 0.5s;
 
+}
+#box:hover{
+    background-color: #00d1ff;
 }
 #image{
     

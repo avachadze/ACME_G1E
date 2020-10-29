@@ -12,27 +12,31 @@
 </head>
 
 <body>
+    <div id="top">
     <header>
         <title>ACME</title>
-        <h1>ACME</h1>
         <h2>Welcome to center</h2>
         <nav>
             <ul>
                 <li> <a href="/" id="mall">mall</a></li>
                 <li><a href="/all" id="all">all</a></li>
-                <li><a href="#footer">info</a></li>
                 <li><a href="/add" id="add">add</a></li>
                 <li><a href="/delete" id="delete">delete</a></li>
                 <li><a href="/change" id="modify">modify</a></li>
             </ul>
         </nav>
     </header>
+    </div>
     <div class="d-flex">
     @yield('content');
     </div>
-    <footer id="footer">
+    <footer>
+        <div id = "arrow">
+            <a href="#top"><img id = "arrowImg" src = "images/arrow.png"></a>
+        </div>    
         <h5>Email:mallInfo@acme.com</h5>
         <h5>Number:635 87 68 25</h5>
+    </div>
     </footer>
 </body>
 </html>
