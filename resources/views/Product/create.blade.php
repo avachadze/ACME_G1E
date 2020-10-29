@@ -6,6 +6,7 @@
     <link rel="stylesheet" media="screen and (min-width:400px) and (max-width:599px)" href="css/all/main.css">
     <link rel="stylesheet" media="screen and (min-width:600px) and (max-width:999px)" href="css//all/mainT.css">
     <link rel="stylesheet" media="screen and (min-width:1000px)" href="css/all/mainC.css">
+    <link href = {{ asset("bootstrap/css/bootstrap.css") }} rel="stylesheet" />
 @endsection
 
 @section('content')
@@ -14,30 +15,30 @@
 
         <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" name="name">
+            <input type="text" class="form-control" name="name">
         </div>
 
         <div class="form-group">
             <label for="shopID">Shop ID:</label>
-            <input type="text" name="shopID">
+            <input type="text" class="form-control" name="shopID">
         </div>
 
         <div class="form-group">
             <label for="quantity">Stock:</label>
-            <input type="text" name="quantity">
+            <input type="text" class="form-control" name="quantity">
         </div>
 
-        <div>
+        <div class="form-group">
             <label for="price">Price:</label>
-            <input type="text" name="price">
+            <input type="text" class="form-control" name="price">
         </div>
 
-        <div>
+        <div class="form-group">
             <label for="picture">Product image:</label>
-            <input type="file" name="picture">
+            <input type="file" class="form-control" name="picture">
         </div>
 
-        <input type="submit">
+        <input type="submit" value="submit">
         @csrf
     </form>
 

@@ -2,10 +2,11 @@
 <head>
 <meta name="viewport" content="width=decide-width", initial-scale="1.0">
 
-<link rel="stylesheet" media="screen and (min-width:0px) and (max-width:399px)" href="css/error.css">
-<link rel="stylesheet" media="screen and (min-width:400px) and (max-width:599px)" href="css/main.css">
-<link rel="stylesheet" media="screen and (min-width:600px) and (max-width:999px)" href="css/mainTablet.css">
-<link rel="stylesheet" media="screen and (min-width:1000px)" href="css/mainComputer.css">
+    <link rel="stylesheet" media="screen and (min-width:0px) and (max-width:399px)" href="css/error.css">
+    <link rel="stylesheet" media="screen and (min-width:400px) and (max-width:599px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (min-width:600px) and (max-width:999px)" href="css/mainTablet.css">
+    <link rel="stylesheet" media="screen and (min-width:1000px)" href="css/mainComputer.css">
+    <link href = {{ asset("bootstrap/css/bootstrap.css") }} rel="stylesheet" />
 
  @yield('style')
 
