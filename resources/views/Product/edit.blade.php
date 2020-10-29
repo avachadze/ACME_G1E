@@ -1,12 +1,18 @@
 @extends('layouts.layout')
 
 @section('style')
-
-    <link rel="stylesheet" media="screen and (max-width:399)" href="css/error.css">
-    <link rel="stylesheet" media="screen and (min-width:400px) and (max-width:599px)" href="css/all/main.css">
-    <link rel="stylesheet" media="screen and (min-width:600px) and (max-width:999px)" href="css//all/mainT.css">
-    <link rel="stylesheet" media="screen and (min-width:1000px)" href="css/all/mainC.css">
     <link href = {{ asset("bootstrap/css/bootstrap.css") }} rel="stylesheet" />
+    <style>
+        .hid
+        {
+            display: none;
+        }
+        body
+        {
+            background-color: #393737;
+            color: white;
+        }
+    </style>
 @endsection
 
 @section('content')
