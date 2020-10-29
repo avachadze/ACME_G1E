@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="hid">
         <title>ACME</title>
         <h1>ACME</h1>
         <h2>Welcome to center</h2>
@@ -27,10 +27,10 @@
             </ul>
         </nav>
     </header>
-    <div class="d-flex">
+    <div style="width: 100vw">
     @yield('content')
     </div>
-    <footer id="footer">
+    <footer id="footer" class="hid">
         <h5>Email:mallInfo@acme.com</h5>
         <h5>Number:635 87 68 25</h5>
     </footer>
