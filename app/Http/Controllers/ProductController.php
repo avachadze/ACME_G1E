@@ -8,6 +8,7 @@ use Storage;
 
 class ProductController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -18,6 +19,7 @@ class ProductController extends Controller
         //
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -27,6 +29,7 @@ class ProductController extends Controller
     {
         return view('Product.create');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -58,6 +61,7 @@ class ProductController extends Controller
         $product->save();
     }
 
+
     /**
      * Display the specified resource.
      *
@@ -69,6 +73,7 @@ class ProductController extends Controller
         //
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -77,8 +82,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product= Product::find($id);
+        return view('Product.edit')->with('product', $product);
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -89,8 +96,21 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'shopID'=>'required',
+            'name' => 'required',
+            'quantity' => 'required',
+            'price' => 'required'
+        ]);
+
+        $product= Product::find($id);
+        $product->shopID= $request->input('shopID');
+        $product->name= $request->input('name');
+        $product->quantity= $request->input('quantity');
+        $product->price= $request ->input('price');
+        $product->save();
     }
+
 
     /**
      * Remove the specified resource from storage.

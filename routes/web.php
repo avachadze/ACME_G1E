@@ -18,14 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/add', function () {
-    return view('add');
-});
-Route::get('/create', function () {
-    return view('create');
-});
-Route::get('/delete', function () {
-    return view('delete');
-});
 Route::resource('/all', 'AllController');
 Route::resource('/product', 'ProductController');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
