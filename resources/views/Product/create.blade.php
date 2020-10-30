@@ -27,11 +27,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="shopID">Shop ID:</label>
-                    <input type="text" class="form-control"  name="shopID" id="shopID">
-                </div>
-
-                <div class="form-group">
                     <label for="quantity">Stock:</label>
                     <input type="text" class="form-control" id="quantity" name="quantity">
                 </div>
@@ -47,7 +42,7 @@
                     <label for="picture">Product image:</label>
                     <input type="file" class="form-control-file" id="picture" name="picture">
                 </div>
-
+                <input type="hidden" value="{{ $shopID }}" name="shopID">
                 <input type="submit" value="submit">
             </div>
 

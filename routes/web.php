@@ -16,10 +16,14 @@ use App\Http\Controllers;
 
 Route::get('/', 'MallController@index');
 Route::get('/add', 'AddController@index');
+Route::get('/select', function () {
+    return view('selectShop');
+});
 
-Route::resource('/product', 'ProductController');
+Route::resource('/product', 'ProductController')->except('create');
 Route::resource('/shop', 'ShopController');
 Route::resource('/mall', 'MallController');
+Route::get('/product/create/{shopID}', 'ProductController@create');
 
 /*Auth::routes();
 

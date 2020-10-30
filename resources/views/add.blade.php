@@ -35,7 +35,7 @@
             </div>
 
             <div id="column">
-                <a href="/product/create">
+                <a href="/select">
                     <div id="mall1">
                         <h1>Product</h1>
                         <img src="/images/product.jpg">

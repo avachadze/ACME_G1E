@@ -17,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return redirect('/shop');
     }
 
 
@@ -26,9 +26,9 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($shopID)
     {
-        return view('Product.create');
+        return view('Product.create')->with('shopID', $shopID);
     }
 
 
@@ -41,7 +41,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'shopID'=>'required',
+            'shopID' => '',
             'name' => 'required',
             'quantity' => 'required',
             'price' => 'required',

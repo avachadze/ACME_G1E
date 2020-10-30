@@ -53,7 +53,6 @@ class ShopController extends Controller
         $shop->mallID= $request->input('mallID');
         $shop->logo= $path;
         $shop->save();
-        redirect('/shop');
         return redirect('/mall/' . $request->input('mallID'));
     }
 
