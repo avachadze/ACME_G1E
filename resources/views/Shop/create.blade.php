@@ -26,16 +26,12 @@
                     <input type="text" name="name"  id="name"  class="form-control">
                 </div>
 
-
-                <div class="form-group">
-                    <label for="mallID">Mall ID:</label>
-                    <input type="text" name="mallID"  id="mallID"  class="form-control">
-                </div>
-
                 <div class="form-group">
                     <label for="logo">Logo:</label>
                     <input type="file" class="form-control-file" id="logo" name="logo">
                 </div>
+
+                <input type="hidden" value="{{ $mallID }}" name="mallID">
 
                 <input type="submit" value="submit">
             </div>

@@ -12,6 +12,7 @@
 @section('content')
     @if (count($shops) > 0)
         <div id="space">
+            <h1>Select the shop for the object</h1>
             @foreach ($shops as $shop)
 
 

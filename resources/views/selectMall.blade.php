@@ -8,24 +8,25 @@
     <link rel="stylesheet" media="screen and (min-width:1000px)" href="css/all/mainC.css">
 @endsection
 
-<input type="hidden" value="{{ $shops= \App\Models\Shop::all() }}">
+<input type="hidden" value="{{ $malls= \App\Models\Mall::all() }}">
 @section('content')
-    @if (count($shops) > 0)
+    @if (count($malls) > 0)
         <div id="space">
-            @foreach ($shops as $shop)
+            <h1>Select the mall for the object</h1>
+            @foreach ($malls as $mall)
 
 
                 <div id="box">
-                    <a href="/product/create/{{ $shop->id }}">
-                        <div id="image"><img src="{{ $shop->logo }}"></div>
-                        <h3>{{ __($shop->name) }}</h3>
+                    <a href="/shop/create/{{ $mall->id }}">
+                        <div id="image"><img src="{{ $mall->logo }}"></div>
+                        <h3>{{ __($mall->name) }}</h3>
                     </a>
                 </div>
 
             @endforeach
         </div>
     @else
-        <h1>There are no shops registered yet</h1>
+        <h1>There are no malls registered yet</h1>
     @endif
     <div id="error">
         This device is not compatible with this page.

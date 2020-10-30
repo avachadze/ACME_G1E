@@ -24,9 +24,9 @@ class ShopController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($mallID)
     {
-        return view('Shop.create');
+        return view('Shop.create')->with('mallID', $mallID);
     }
 
     /**
