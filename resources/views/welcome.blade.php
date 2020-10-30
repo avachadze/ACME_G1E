@@ -14,7 +14,9 @@
                 </div>
 
             </a>
-            <input type="button" name="map" value="map" onclick="map1()">
+
+                <input type="button" id="alcampoMap" value="map" onclick="map1()">
+
         </div>
         <div id="column">
             <a href="/all">
@@ -22,7 +24,7 @@
                     <img id="urbil" src="images/urbil2.png">
                 </div>
             </a>
-            <input type="button" name="map" value="map" onclick="map2()">
+            <input type="button" id="urbilMap" value="map" onclick="map2()">
         </div>
     </div>
 </section>
