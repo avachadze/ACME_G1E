@@ -2,10 +2,12 @@
 
 @section('style')
 
-    <link rel="stylesheet" media="screen and (max-width:399)" href="css/error.css">
-    <link rel="stylesheet" media="screen and (min-width:400px) and (max-width:599px)" href="css/all/main.css">
-    <link rel="stylesheet" media="screen and (min-width:600px) and (max-width:999px)" href="css//all/mainT.css">
-    <link rel="stylesheet" media="screen and (min-width:1000px)" href="css/all/mainC.css">
+    <style>
+        #add
+        {
+            color: red;
+        }
+    </style>
 @endsection
 
 <input type="hidden" value="{{ $shops= \App\Models\Shop::all() }}">

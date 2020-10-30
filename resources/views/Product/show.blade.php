@@ -44,7 +44,8 @@
                 </div>
 
                 <div class="row mt-1">
-                    <h1>From the shop: {{ $product->shopID }}</h1>
+                    <input type="hidden" value="{{ $shop= \App\Models\Shop::find($product->shopID) }}">
+                    <h1>From the shop: {{ $shop->name }}</h1>
                 </div>
 
                 <form class="row mt-1" action="{{ route('product.destroy', $product->id) }}" method="POST">

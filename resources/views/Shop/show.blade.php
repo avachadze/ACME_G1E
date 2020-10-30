@@ -9,7 +9,7 @@
 
 @section('style')
     <style>
-        #mall
+        #all
         {
             color: red;
         }

@@ -110,7 +110,22 @@ class MallController extends Controller
     public function destroy($id)
     {
         $mallToDestroy = Mall::find($id);
+        self::destroyShops($mallToDestroy);
         $mallToDestroy->delete();
         return redirect('/');
+    }
+
+    private static function destroyShops($toDestroy)
+    {
+        $id= $toDestroy->id;
+        $shops= Shop::all();
+        foreach ($shops as $shop)
+        {
+            if ($shop->mallID == $id)
+            {
+                ShopController::destroyProducts($shop);
+                $shop->delete();
+            }
+        }
     }
 }

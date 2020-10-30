@@ -107,7 +107,21 @@ class ShopController extends Controller
     public function destroy($id)
     {
         $shopToDestroy = Shop::find($id);
+        self::destroyProducts($shopToDestroy);
         $shopToDestroy->delete();
         return redirect('/');
+    }
+
+    public static function destroyProducts($toDestroy)
+    {
+        $id= $toDestroy->id;
+        $products= Product::all();
+        foreach ($products as $product)
+        {
+            if ($product->shopID == $id)
+            {
+                $product->delete();
+            }
+        }
     }
 }
