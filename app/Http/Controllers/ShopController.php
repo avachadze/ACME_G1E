@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\Shop;
 
 class ShopController extends Controller
 {
@@ -13,7 +15,8 @@ class ShopController extends Controller
      */
     public function index()
     {
-        //
+        $shops= Shop::All();
+        return view('shops')->with('shops', $shops);
     }
 
     /**
@@ -23,7 +26,7 @@ class ShopController extends Controller
      */
     public function create()
     {
-        //
+        return view('Shop.create');
     }
 
     /**
@@ -34,17 +37,24 @@ class ShopController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate($request, [
-            'id'=>'',
-            'mallCode'=>'required',
-            'name'=>'reqired',
-            'logo'=>''
+        $this->validate($request, [
+            'name' => 'required',
+            'mallID' => 'required',
+            'logo' => 'required'
         ]);
+
+        $shopName= $request->input('name');
+        $img= $request->file('logo');
+        $fileName= $shopName . '-' . time() . '-' . date(DATE_ATOM);
+        $path= $img->storeAs('public/images/logos', $fileName);
+
         $shop = new Shop();
-        $shop->mallCode = $request->input('mallCode');
-        $shop->name = $request->input('name');
-        $shop->logo = $request->file('logo');
-        $shop-save()
+        $shop->name= $shopName;
+        $shop->mallID= $request->input('mallID');
+        $shop->logo= $path;
+        $shop->save();
+        redirect('/shop');
+        return redirect('/mall/' . $request->input('mallID'));
     }
 
     /**
@@ -55,7 +65,9 @@ class ShopController extends Controller
      */
     public function show($id)
     {
-        //
+        $products= Product::all();
+        $shop= Shop::find($id);
+        return view('Shop.show')->with(['shop' => $shop, 'products' => $products, 'id' => $id]);
     }
 
     /**
@@ -66,7 +78,8 @@ class ShopController extends Controller
      */
     public function edit($id)
     {
-        //
+        $shop= Shop::find($id);
+        return view('Shop.edit')->with('shop', $shop);
     }
 
     /**
@@ -78,7 +91,12 @@ class ShopController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate($request, [
+            'name'=>'required'
+        ]);
+        $shop = new Shop();
+        $shop->name = $request->input('name');
+        $shop->save();
     }
 
     /**
@@ -89,6 +107,8 @@ class ShopController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $shopToDestroy = Shop::find($id);
+        $shopToDestroy->delete();
+        return redirect('/');
     }
 }

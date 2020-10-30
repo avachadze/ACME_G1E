@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Shop;
 use Illuminate\Http\Request;
+use App\Models\Mall;
+use Storage;
 
 class MallController extends Controller
 {
@@ -13,7 +16,8 @@ class MallController extends Controller
      */
     public function index()
     {
-        //
+        $malls= Mall::All();
+        return view('malls')->with('malls', $malls);
     }
 
     /**
@@ -23,17 +27,7 @@ class MallController extends Controller
      */
     public function create()
     {
-        $request->validate($request, [
-            'id'=>'',
-            'name'=>'required',
-            'logo'=>'',
-            'headerImage'=>''
-        ]);
-        $mall = new Mall();
-        $mall->name=$request->input('name');
-        $mall->logo=$request->file('logo');
-        $mall->headerImage=$request->file('headerImage');
-        $mall-save();
+        return view('Mall.create');
     }
 
     /**
@@ -44,7 +38,22 @@ class MallController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $this->validate($request, [
+            'name' => 'required',
+            'logo' => 'required'
+        ]);
+
+        $mallName= $request->input('name');
+        $img= $request->file('logo');
+        $fileName= $mallName . '-' . time() . '-' . date(DATE_ATOM) . '.jpg';
+        $path= $img->storeAs('public/images/mallLogos', $fileName);
+
+        $mall = new Mall();
+        $mall->name= $mallName;
+        $mall->logo= $path;
+        $mall->save();
+
+        return redirect('/');
     }
 
     /**
@@ -55,7 +64,9 @@ class MallController extends Controller
      */
     public function show($id)
     {
-        //
+        $shops= Shop::all();
+        $mall= Mall::find($id);
+        return view('Mall.show')->with(['mall' => $mall, 'shops' => $shops, 'id' => $id]);
     }
 
     /**
@@ -66,7 +77,8 @@ class MallController extends Controller
      */
     public function edit($id)
     {
-        //
+        $mall= Mall::find($id);
+        return view('Mall.edit')->with('mall', $mall);
     }
 
     /**
@@ -78,7 +90,15 @@ class MallController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+        $mall = Mall::find($id);
+        $mall->name= $request->input('name');
+        $mall->save();
+
+        return redirect('/');
     }
 
     /**
@@ -89,6 +109,8 @@ class MallController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $mallToDestroy = Mall::find($id);
+        $mallToDestroy->delete();
+        return redirect('/');
     }
 }

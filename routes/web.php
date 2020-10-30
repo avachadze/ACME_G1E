@@ -14,13 +14,13 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MallController@index');
+Route::get('/add', 'AddController@index');
 
-Route::resource('/all', 'AllController');
 Route::resource('/product', 'ProductController');
+Route::resource('/shop', 'ShopController');
+Route::resource('/mall', 'MallController');
 
-Auth::routes();
+/*Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Shop;
 use Storage;
 
 class ProductController extends Controller
@@ -49,8 +50,8 @@ class ProductController extends Controller
 
         $productName= $request->input('name');
         $img= $request->file('picture');
-        $fileName= $productName . time();
-        $path= $img->storeAs('public/images', $fileName);
+        $fileName= $productName . '-' . time() . '-' . date(DATE_ATOM);
+        $path= $img->storeAs('public/images/products', $fileName);
 
         $product= new Product();
         $product->shopID= $request->input('shopID');
@@ -58,7 +59,13 @@ class ProductController extends Controller
         $product->quantity= $request->input('quantity');
         $product->price= $request ->input('price');
         $product->picture= $path;
+
+        $shop= Shop::find($request->input('shopID'));
+        $product->mallID= $shop->mallID;
+
         $product->save();
+
+        return redirect('/shop/' . $request->input('shopID'));
     }
 
 
@@ -70,7 +77,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product= Product::find($id);
+        return view('Product.show')->with('product', $product);
     }
 
 
@@ -120,6 +128,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $productToDestroy = Product::find($id);
+        $productToDestroy->delete();
+        return redirect('/');
     }
 }
